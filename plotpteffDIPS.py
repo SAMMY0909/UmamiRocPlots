@@ -38,7 +38,7 @@ dips_l_lrt = var_vs_eff(
     wp=0.77,
     disc_cut=None,
     fixed_eff_bin=False,
-    label="DIPS R22 Epoch:200 LRT+STD",
+    label="DIPS R22 LRT+STD",
 )
 
 dips_l_std = var_vs_eff(
@@ -50,7 +50,7 @@ dips_l_std = var_vs_eff(
     wp=0.77,
     disc_cut=None,
     fixed_eff_bin=False,
-    label="DIPS R22 Epoch:200 STD",
+    label="DIPS R22 STD",
 )
 
 logger.info("Plotting light bkg rejection for inclusive efficiency as a function of pt.")
@@ -67,7 +67,7 @@ plot_bkg_rej.add(dips_l_std, reference=True)
 plot_bkg_rej.add(dips_l_lrt)
 
 plot_bkg_rej.draw()
-plot_bkg_rej.savefig("pt_l_rej_DIPSe200.png")
+plot_bkg_rej.savefig("pt_l_rej_DIPS.png")
 ######################################################################
 dips_c_lrt = var_vs_eff(
     x_var_sig=pt[is_b_lrt],
@@ -78,7 +78,7 @@ dips_c_lrt = var_vs_eff(
     wp=0.77,
     disc_cut=None,
     fixed_eff_bin=False,
-    label="DIPS R22 Epoch:200 LRT+STD",
+    label="DIPS R22 LRT+STD",
 )
 
 dips_c_std = var_vs_eff(
@@ -90,7 +90,7 @@ dips_c_std = var_vs_eff(
     wp=0.77,
     disc_cut=None,
     fixed_eff_bin=False,
-    label="DIPS R22 Epoch:200 STD",
+    label="DIPS R22 STD",
 )
 logger.info("Plotting c bkg rejection for inclusive efficiency as a function of pt.")
 # You can choose between different modes: "sig_eff", "bkg_eff", "sig_rej", "bkg_rej"
@@ -106,7 +106,7 @@ plot_bkg_rej1.add(dips_c_std, reference=True)
 plot_bkg_rej1.add(dips_c_lrt)
 
 plot_bkg_rej1.draw()
-plot_bkg_rej1.savefig("pt_c_rej_DIPSe200.png")
+plot_bkg_rej1.savefig("pt_c_rej_DIPS.png")
 ##################################################################
 plot_sig_eff = var_vs_eff_plot(
     mode="sig_eff",
@@ -119,11 +119,11 @@ plot_sig_eff = var_vs_eff_plot(
 plot_sig_eff.add(dips_l_std, reference=True)
 plot_sig_eff.add(dips_l_lrt)
 
-plot_sig_eff.atlas_second_tag += "\nInclusive $\\epsilon_b=77%%$"
+plot_sig_eff.atlas_second_tag += "\n $\\epsilon_b=77%%$"
 
 # If you want to inverse the discriminant cut you can enable it via
 # plot_sig_eff.set_inverse_cut()
 plot_sig_eff.draw()
 # Drawing a hline indicating inclusive efficiency
 plot_sig_eff.draw_hline(0.77)
-plot_sig_eff.savefig("pt_b_eff_DIPSe200.png")
+plot_sig_eff.savefig("pt_b_eff_DIPS.png")

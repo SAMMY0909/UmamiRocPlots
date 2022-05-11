@@ -46,7 +46,7 @@ plot_roc.add_roc(
         n_test=df["dips_ujets_rej"].count(),
         rej_class="ujets",
         signal_class="bjets",
-        label="e 200 DIPS STD+LRT d0-30,z0-30",
+        label="DIPS STD+LRT d0-30,z0-30",
     ),
 )
 plot_roc.add_roc(
@@ -56,7 +56,7 @@ plot_roc.add_roc(
         n_test=df1["dips_ujets_rej"].count(),
         rej_class="ujets",
         signal_class="bjets",
-        label="e 200 DIPS STD d0-30,z0-30",
+        label="DIPS STD d0-30,z0-30",
     ),
     reference=True,
 )
@@ -67,7 +67,7 @@ plot_roc.add_roc(
         n_test=df["dips_cjets_rej"].count(),
         rej_class="cjets",
         signal_class="bjets",
-        label="e 200 DIPS STD+LRT d0-30,z0-30",
+        label="DIPS STD+LRT d0-30,z0-30",
     ),
 )
 plot_roc.add_roc(
@@ -77,7 +77,7 @@ plot_roc.add_roc(
         n_test=df1["dips_cjets_rej"].count(),
         rej_class="cjets",
         signal_class="bjets",
-        label="e 200 DIPS STD d0-30,z0-30",
+        label="DIPS STD d0-30,z0-30",
     ),
     reference=True,
 )
@@ -89,7 +89,7 @@ plot_roc.add_roc(
         n_test=df2["dips_ujets_rej"].count(),
         rej_class="ujets",
         signal_class="bjets",
-        label="e 200 DIPS STD+LRT d0-3.5,z0-5",
+        label="DIPS STD+LRT d0-3.5,z0-5",
     ),
 )
 plot_roc.add_roc(
@@ -99,7 +99,7 @@ plot_roc.add_roc(
         n_test=df3["dips_ujets_rej"].count(),
         rej_class="ujets",
         signal_class="bjets",
-        label="e 200 DIPS STD d0-3.5,z0-5",
+        label="DIPS STD d0-3.5,z0-5",
     ),
 )
 plot_roc.add_roc(
@@ -109,7 +109,7 @@ plot_roc.add_roc(
         n_test=df2["dips_cjets_rej"].count(),
         rej_class="cjets",
         signal_class="bjets",
-        label="e 200 DIPS STD+LRT d0-3.5,z0-5",
+        label="DIPS STD+LRT d0-3.5,z0-5",
     ),
 )
 plot_roc.add_roc(
@@ -119,7 +119,7 @@ plot_roc.add_roc(
         n_test=df3["dips_cjets_rej"].count(),
         rej_class="cjets",
         signal_class="bjets",
-        label="e 200 DIPS STD d0-3.5,z0-5",
+        label="DIPS STD d0-3.5,z0-5",
     ),
 )
 
@@ -138,6 +138,6 @@ plot_roc.set_leg_rej_labels("cjets", "c jets rejection")
 
 
 plot_roc.draw()
-plot_roc.savefig("roc_DIPScomparisone200.png")
+plot_roc.savefig("roc_DIPScomparison.png")
 
 
