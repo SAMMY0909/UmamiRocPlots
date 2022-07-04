@@ -211,6 +211,8 @@ plot_sig_eff = VarVsEffPlot(
 )
 plot_sig_eff.add(dips_l_std)
 plot_sig_eff.add(dips_l_lrt)
+plot_sig_eff.add(dips_l_std1)
+plot_sig_eff.add(dips_l_lrt1)
 plot_sig_eff.add(dips_l_ref)
 
 plot_sig_eff.atlas_second_tag += "\n $\\epsilon_b=77%%$"
@@ -221,3 +223,4 @@ plot_sig_eff.draw()
 # Drawing a hline indicating inclusive efficiency
 plot_sig_eff.draw_hline(0.77)
 plot_sig_eff.savefig("pt_b_eff_DIPS.png")
+
